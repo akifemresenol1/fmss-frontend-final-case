@@ -1,0 +1,29 @@
+.starship-detail {
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid #f0db4f;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+.starship-detail h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.starship-detail p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.starship-detail img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}

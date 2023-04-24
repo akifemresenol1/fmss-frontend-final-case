@@ -1,0 +1,110 @@
+.title {
+  text-align: center;
+  color: aliceblue;
+  padding-top: 120px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto 20px auto;
+  max-width: 1200px;
+}
+
+.starship-card {
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 5px 0px rgba(240, 219, 79, 0.8);
+}
+
+.starship-card:hover {
+  box-shadow: 0px 5px 10px 0px rgba(240, 219, 79, 0.8);
+}
+
+.starship-card h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  color: rgb(222, 222, 50);
+}
+
+.starship-card p {
+  margin: 0;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.load-more-button {
+  box-shadow: 0 2px 5px rgba(248, 240, 7, 0.2);
+  border: 1px solid rgb(249, 235, 36);
+  background-color: transparent;
+  color: rgb(248, 244, 8);
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 4em;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.back-to-top-button {
+  box-shadow: 0 2px 5px rgba(248, 240, 7, 0.2);
+  border: 1px solid rgb(249, 235, 36);
+  background-color: transparent;
+  color: rgb(248, 244, 8);
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 4em;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.name {
+  color: yellow;
+}
+
+.img-ship {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 30px 30px 0px 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .img-ship {
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+    height: 200px;
+  }
+}
