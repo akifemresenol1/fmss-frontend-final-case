@@ -1,7 +1,8 @@
-.title {
+.main {
   text-align: center;
   color: aliceblue;
   padding-top: 120px;
+  background-color: rgb(0, 0, 0);
 }
 
 .card-container {
@@ -18,6 +19,9 @@
   padding: 0;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 0px 5px 0px rgba(240, 219, 79, 0.8);
+  position: relative;
+  background-image: url("../../assets/sw-bg2-5.png");
+  background-size: 100%;
 }
 
 .starship-card:hover {
@@ -37,17 +41,6 @@
   margin: 0;
   font-size: 14px;
   font-family: Roboto, sans-serif;
-}
-
-.modal-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
 }
 
 .link {
@@ -89,22 +82,36 @@
 }
 
 .img-ship {
+  position: relative;
   width: 100%;
-  height: 300px;
-  object-fit: contain;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  width: 50%;
-  padding: 30px 30px 0px 30px;
-  transition: all 0.2s ease-in-out;
+  padding-bottom: 56.25%;
+}
+@media screen {
+  .img-ship img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    padding: 30px 30px 0 30px;
+    object-fit: contain;
+    max-width: 800px;
+  }
 }
 
-@media (max-width: 768px) {
-  .img-ship {
-    width: 100%;
-    padding: 0;
-    margin-top: 10px;
-    height: 200px;
-  }
+.rating h2 {
+  color: aliceblue;
+}
+.rating {
+  color: fff;
+  border: 1px solid #d6b055;
+  background-color: transparent;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  margin: 0 auto 20px auto;
 }

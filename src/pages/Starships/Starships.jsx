@@ -3,6 +3,7 @@ import "./Starships.css";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
+import ReactStars from "react-rating-stars-component";
 
 import Header from "../../components/Header";
 import SearchBar from "../../components/SearchBar";
@@ -22,7 +23,6 @@ export default function Starships() {
   const imgUrl = getId
     ? `https://ik.imagekit.io/akifemresenol/starships/${getId}.png?updatedAt=1682374179359`
     : null;
-
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -36,6 +36,7 @@ export default function Starships() {
               name: starship.name,
               model: starship.model,
               id: starship.url.split("/").filter(Boolean).pop(),
+              hyperdrive_rating: starship.hyperdrive_rating,
             };
           }),
         ]);
@@ -73,13 +74,15 @@ export default function Starships() {
       {isLoading ? (
         <LoadingScreen />
       ) : (
-        <div className="title">
+        <div className="main">
           <Header />
           <h1>Starships</h1>
           <SearchBar />
           <div className="card-container">
             {starships.map((starship) => {
               const imgUrl = `https://ik.imagekit.io/akifemresenol/starships/${starship.id}.png?updatedAt=1682374179359`;
+              console.log(starship.hyperdrive_rating);
+
               return (
                 <div
                   className="starship-card"
@@ -88,10 +91,23 @@ export default function Starships() {
                 >
                   <Link className="link" to={`/starships/${starship.id}`}>
                     <h2>{starship.name}</h2>
-                    <p>{starship.model}</p>
                     <div className="img-ship">
                       {imgUrl && <img src={imgUrl} alt="img" />}
                     </div>
+                    <div className="rating">
+                      {starship.hyperdrive_rating !== "unknown" && (
+                        <ReactStars
+                          count={5}
+                          size={24}
+                          activeColor="#ffff00"
+                          value={Number(starship.hyperdrive_rating)}
+                          edit={false}
+                          isHalf
+                        />
+                      )}
+                    </div>
+
+                    <p>{starship.model}</p>
                   </Link>
                 </div>
               );
