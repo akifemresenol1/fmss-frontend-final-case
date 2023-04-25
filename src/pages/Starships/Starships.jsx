@@ -18,12 +18,12 @@ export default function Starships() {
   const [selectedStarship, setSelectedStarship] = useState(null);
   const [loadedAllStarships, setLoadedAllStarships] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [query, setQuery] = useState("");
 
   const getId = starship ? getStarshipId(starship.url) : null;
   const imgUrl = getId
     ? `https://ik.imagekit.io/akifemresenol/starships/${getId}.png?updatedAt=1682374179359`
     : null;
-  const [query, setQuery] = useState("");
 
   useEffect(() => {
     axios
@@ -60,13 +60,23 @@ export default function Starships() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   // console.log(query);
-  // useState request url searching
-
-  const filteredStarships = starships.filter(
-    (starship) =>
-      starship.name.toLowerCase().includes(query.toLowerCase()) ||
-      starship.model.toLowerCase().includes(query.toLowerCase())
-  );
+  const searchStarship = (query) => {
+    return axios
+      .get(`https://swapi.dev/api/starships/?search=${query}`)
+      .then((response) => {
+        setStarships(
+          response.data.results.map((starship) => {
+            return {
+              name: starship.name,
+              model: starship.model,
+              id: starship.url.split("/").filter(Boolean).pop(),
+              hyperdrive_rating: starship.hyperdrive_rating,
+            };
+          })
+        );
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
@@ -77,7 +87,13 @@ export default function Starships() {
         <div className="main">
           <Header />
           <h1>Starships</h1>
-          <SearchBar />
+          <SearchBar
+            value={query}
+            onInputhange={(e) => {
+              setQuery(e.target.value);
+            }}
+            onSearch={searchStarship}
+          />
           <div className="card-container">
             {starships.map((starship) => {
               const imgUrl = `https://ik.imagekit.io/akifemresenol/starships/${starship.id}.png?updatedAt=1682374179359`;
