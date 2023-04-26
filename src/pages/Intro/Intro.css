@@ -16,9 +16,9 @@ body {
 
 .logo {
   max-height: 300px;
-  margin-bottom: 10em;
+  margin-bottom: 1em;
 }
-.intro button {
+.explore-button {
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: 1em;
@@ -30,12 +30,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 5px rgba(248, 240, 7, 0.2);
   border: 1px solid rgb(249, 235, 36);
   padding: 10px;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+.explore-button:hover {
+  transform: scale(1.05);
 }

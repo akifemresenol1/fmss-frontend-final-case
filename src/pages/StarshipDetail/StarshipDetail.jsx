@@ -49,7 +49,12 @@ export default function StarshipDetail() {
       <p>Manufacturer: {starship.manufacturer}</p>
       <p>Crew: {starship.crew}</p>
       <p>Cargo Capacity: {starship.cargo_capacity}</p>
-      <button onClick={() => navigate("/starships")}>Back to Starships</button>
+      <button
+        className="btn-backStarship"
+        onClick={() => navigate("/starships")}
+      >
+        Back to Starships
+      </button>
     </div>
   );
 }

@@ -21,7 +21,9 @@ function Error() {
       ) : (
         <div className="error">
           <img src={logo404} alt="" />
-          <button onClick={() => navigate("/")}>RETURN TO BASE</button>
+          <button className="btn-return" onClick={() => navigate("/")}>
+            RETURN TO BASE
+          </button>
         </div>
       )}
     </>

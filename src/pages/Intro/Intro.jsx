@@ -9,10 +9,10 @@ function Intro() {
     <div className="intro">
       <img className="logo" src={logo} alt="logo" />
       <button
+        className="explore-button"
         onClick={() => {
           navigate("/starships");
         }}
-        className="explore-button"
       >
         EXPLORE STARSHIPS
       </button>
