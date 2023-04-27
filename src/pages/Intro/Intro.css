@@ -1,32 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&family=Poppins&display=swap");
+
 body {
   background-image: url("../../assets/sw-bg2-5.png");
   background-color: rgb(33, 34, 37);
   background-size: 100%;
-
-  padding: 0;
-  margin: 0;
 }
 .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  overflow: hidden;
 }
 
-.logo {
-  max-height: 300px;
-  margin-bottom: 5em;
+.logo-intro {
+  max-height: 1280px;
+  max-width: 720px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  animation: logo 31s linear forwards;
 }
+@keyframes logo {
+  0% {
+    width: 200px;
+    opacity: 1;
+  }
+
+  50% {
+    width: 0;
+    opacity: 0;
+  }
+  90% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 200px;
+    opacity: 1;
+  }
+}
+
 .explore-button {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  position: absolute;
+  top: 10%;
   font-size: 1em;
   font-weight: bold;
+  font-family: "Bruno Ace SC", cursive;
   text-transform: uppercase;
   text-align: center;
   background-color: transparent;
-  color: rgb(248, 244, 8);
+  color: #ffe81f;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
@@ -36,4 +64,62 @@ body {
 }
 .explore-button:hover {
   transform: scale(1.05);
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  color: #ffe81f;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.scroller {
+  font-family: "Bruno Ace SC", cursive;
+  font-weight: bold;
+  font-size: 350%;
+  text-align: justify;
+  overflow: hidden;
+  height: 60em;
+  width: 20em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -10em;
+  z-index: 0;
+  transform: perspective(350px) rotateX(25deg);
+  transform-origin: 50% 100%;
+}
+
+#intro-content {
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  top: 100%;
+  animation: scroller 30s ease-in-out 2s;
+}
+@keyframes scroller {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    top: 50%;
+    opacity: 0;
+  }
 }
