@@ -1,47 +1,28 @@
-.search {
+.search-bar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 3rem;
-  position: center;
   width: 100%;
-  padding-bottom: 40px;
+  border: 2px solid #ebd15a;
+  border-color: #ebd15a;
+  padding: 0 10px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: rgb(33, 34, 37);
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .search-bar input {
-  height: 2.4rem;
-  width: 24rem;
-  border-radius: 4rem;
-  text-align: center;
-  background-color: rgb(33, 34, 37);
-  opacity: 0.8;
-  border: 0.05rem solid #ebd15a;
-  border-color: #ebd15a;
-  box-shadow: 0 0 0.1rem #ebd15a, 0 0 0.05rem #fff, 0 0 0.05rem #ebd15a,
-    0 0 0.05rem #ebd15a, 0 0 1.05rem #ebd15a, inset 0 0 0.5rem #ebd15a;
+  height: 40px;
   color: #d6d6d6;
-}
-
-.search-bar button {
-  height: 2rem;
-  margin-left: 1rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
   border: none;
-  background-color: #ebd15a;
-  color: #292929;
-  font-weight: bold;
-  cursor: pointer;
+  background-color: rgb(33, 34, 37);
+  border-radius: 20px;
+  font-size: 12px;
+  width: 100%;
 }
 
-.search-bar button:hover {
-  background-color: #292929;
-  color: #ebd15a;
-}
-
-.search-icon {
-  max-height: 14px;
-  position: absolute;
-  top: 34.5%;
-  left: 60%;
+.search-bar input:focus {
+  outline: none;
 }
