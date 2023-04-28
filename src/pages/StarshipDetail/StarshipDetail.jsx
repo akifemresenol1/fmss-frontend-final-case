@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./StarshipDetail.css";
-import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useParams, useNavigate } from "react-router-dom";
+
 import LoadingScreen from "../../components/Loading";
 import { REACT_APP_API_BASE_URL } from "../../api/starships";
 import getStarshipId from "../../utils/getStarshipId";
 import backImg from "../../assets/goBack.png";
+import "./StarshipDetail.css";
 
 export default function StarshipDetail() {
   const [starship, setStarship] = useState(null);

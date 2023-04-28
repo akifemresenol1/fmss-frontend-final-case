@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
+
 import volumeOn from "../../../../assets/volumeOn.png";
 import volumeOff from "../../../../assets/volumeOff.png";
-
 import "./Audio.css";
 
 const Audio = ({ src, controls, autoplay }) => {

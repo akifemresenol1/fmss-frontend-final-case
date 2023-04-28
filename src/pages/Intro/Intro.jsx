@@ -1,9 +1,10 @@
 import React from "react";
-import logo from "../../assets/sw-logo.png";
 import { useNavigate } from "react-router-dom";
-import "./Intro.css";
+
+import logo from "../../assets/sw-logo.png";
 import audio from "../../assets/sw-audio.mp3";
 import Speaker from "./components/Audio";
+import "./Intro.css";
 
 function Intro() {
   const navigate = useNavigate();

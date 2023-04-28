@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Error404.css";
+
 import logo404 from "../../assets/sw-404.png";
 import LoadingScreen from "../../components/Loading";
+import "./Error404.css";
 
 function Error() {
   const navigate = useNavigate();

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Starships.css";
-
 import { Link } from "react-router-dom";
 import axios from "axios";
 import ReactStars from "react-rating-stars-component";
@@ -10,6 +8,7 @@ import SearchBar from "../../components/SearchBar";
 import LoadingScreen from "../../components/Loading";
 import { REACT_APP_API_BASE_URL } from "../../api/starships";
 import getStarshipId from "../../utils/getStarshipId";
+import "./Starships.css";
 
 export default function Starships() {
   const [starships, setStarships] = useState([]);

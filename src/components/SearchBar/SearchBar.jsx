@@ -1,6 +1,7 @@
 import React from "react";
-import "./SearchBar.css";
 import { ImSearch } from "react-icons/im";
+
+import "./SearchBar.css";
 
 export default function SearchBar({ value, onInputhange, onSearch }) {
   const handleKeyDown = (e) => {
