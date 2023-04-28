@@ -9,8 +9,8 @@
 }
 
 .search-bar input {
-  height: 2rem;
-  width: 20rem;
+  height: 2.4rem;
+  width: 24rem;
   border-radius: 4rem;
   text-align: center;
   background-color: rgb(33, 34, 37);
@@ -37,4 +37,11 @@
 .search-bar button:hover {
   background-color: #292929;
   color: #ebd15a;
+}
+
+.search-icon {
+  max-height: 14px;
+  position: absolute;
+  top: 34.5%;
+  left: 60.5%;
 }

@@ -107,6 +107,7 @@ export default function Starships() {
                 >
                   <Link className="link" to={`/starships/${starship.id}`}>
                     <h2>{starship.name}</h2>
+                    <p>{starship.model}</p>
                     <div className="img-ship">
                       {imgUrl && <img src={imgUrl} alt="img" />}
                     </div>
@@ -122,8 +123,6 @@ export default function Starships() {
                         />
                       )}
                     </div>
-
-                    <p>{starship.model}</p>
                   </Link>
                 </div>
               );

@@ -3,9 +3,9 @@
 .main {
   text-align: center;
   color: #ffe81f;
-  padding-top: 120px;
   background-color: rgb(26, 25, 25);
   font-family: "Bruno Ace SC", cursive;
+  padding-top: 150px;
 }
 
 .card-container {
@@ -17,12 +17,17 @@
 }
 
 .starship-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 30%;
-  height: 390px;
+  min-height: 430px;
+  cursor: pointer;
+  border-radius: 10px 65px 10px 65px;
   margin-bottom: 30px;
   padding: 0;
   transition: all 0.4s ease-in-out;
-  box-shadow: 0px 0px 5px 0px rgba(240, 219, 79, 0.8);
+  box-shadow: 3px 3px 5px 3px rgba(240, 219, 79, 0.8);
   position: relative;
   background-image: url("../../assets/sw-bg2-5.png");
   background-size: 100%;
@@ -34,7 +39,7 @@
 }
 
 .starship-card h2 {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: bold;
@@ -52,6 +57,9 @@
 .link {
   text-decoration: none;
   color: inherit;
+}
+.link p {
+  color: beige;
 }
 
 .load-more-button {
@@ -87,35 +95,39 @@
 }
 
 .img-ship {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
+  display: grid;
+  align-items: center;
+  max-height: 250px;
+  max-width: 80%;
 }
-@media screen {
+
+.img-ship img {
+  margin-top: 40px;
+  margin-left: 40px;
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
   .img-ship img {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    width: 70%;
-    height: 70%;
-    padding: 30px 30px 0 30px;
-    object-fit: contain;
-    max-width: 800px;
+    max-height: 100px;
+    max-width: 300px;
+  }
+  .starship-card {
+    width: 80%;
+    padding: 20px;
   }
 }
 
 .rating {
-  position: absolute;
   border: 1px solid #ffe81f;
   background-color: transparent;
-  padding: 5px;
-  padding-top: 3px;
-  text-align: center;
-  border-radius: 5px;
-  justify-content: center;
-  top: 83%;
-  left: 35%;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  text-align: center;
+  padding: 5px;
   width: 100px;
-  margin: 0 auto 20px auto;
+  margin: 50px auto 20px auto;
+  border-radius: 5px;
 }

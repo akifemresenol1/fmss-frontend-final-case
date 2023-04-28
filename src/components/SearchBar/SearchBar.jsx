@@ -1,11 +1,15 @@
 import React from "react";
 import "./SearchBar.css";
+import { ImSearch } from "react-icons/im";
 
 export default function SearchBar({ value, onInputhange, onSearch }) {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       onSearch(value);
     }
+  };
+  const handleClick = () => {
+    onSearch(value);
   };
   return (
     <div className="search">
@@ -17,6 +21,7 @@ export default function SearchBar({ value, onInputhange, onSearch }) {
           placeholder="Search by name or model"
           onKeyDown={handleKeyDown}
         />
+        <ImSearch className="search-icon" onClick={handleClick} />
       </div>
     </div>
   );
