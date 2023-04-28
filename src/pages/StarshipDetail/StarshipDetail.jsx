@@ -5,6 +5,7 @@ import axios from "axios";
 import LoadingScreen from "../../components/Loading";
 import { REACT_APP_API_BASE_URL } from "../../api/starships";
 import getStarshipId from "../../utils/getStarshipId";
+import backImg from "../../assets/goBack.png";
 
 export default function StarshipDetail() {
   const [starship, setStarship] = useState(null);
@@ -39,22 +40,29 @@ export default function StarshipDetail() {
 
   return (
     <div className="starship-detail">
-      <h2>{starship.name}</h2>
-      <p>Model: {starship.model}</p>
-      <p>Hiperdrive Raiting: {starship.hyperdrive_rating}</p>
-      <hr />
-      <div>{imgUrl && <img src={imgUrl} alt="img" />}</div>
-      <p>Passengers: {starship.passengers}</p>
-      <p>Max Atmosphering Speed: {starship.max_atmosphering_speed}</p>
-      <p>Manufacturer: {starship.manufacturer}</p>
-      <p>Crew: {starship.crew}</p>
-      <p>Cargo Capacity: {starship.cargo_capacity}</p>
-      <button
-        className="btn-backStarship"
-        onClick={() => navigate("/starships")}
-      >
-        Back to Starships
-      </button>
+      <div className="detail-card">
+        <h2>{starship.name}</h2>
+        <p className="model">Model: {starship.model}</p>
+        <div className="ships-img">
+          {imgUrl && <img src={imgUrl} alt="img" />}
+        </div>
+        <div className="features">
+          <h3>Passengers: {starship.passengers}</h3>
+          <h3>Max Atmosphering Speed: {starship.max_atmosphering_speed}</h3>
+          <h3>Manufacturer: {starship.manufacturer}</h3>
+          <h3>Crew: {starship.crew}</h3>
+          <h3>Cargo Capacity: {starship.cargo_capacity}</h3>
+        </div>{" "}
+        <p className="rating-detail">
+          Hiperdrive Raiting: {starship.hyperdrive_rating}
+        </p>
+        <button
+          className="btn-backStarship"
+          onClick={() => navigate("/starships")}
+        >
+          <img src={backImg} alt="go back" />
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,44 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&family=Poppins&display=swap");
+
 .starship-detail {
-  margin: 50px auto;
-  max-width: 600px;
-  padding: 20px;
-  border: 2px solid #f0db4f;
-  border-radius: 5px;
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
+  max-width: 100%;
+  max-height: 100vh;
+  box-sizing: border-box;
+  color: #ffe81f;
+  background-color: rgb(26, 25, 25);
+  background-size: 100%;
+  overflow: hidden;
 }
 
-.starship-detail h2 {
+.detail-card {
+  margin: 50px auto;
+  max-width: 1200px;
+  height: 600px;
+  border: 2px solid #f0db4f;
+  background-color: transparent;
+  border-radius: 30px;
+  color: #ffe81f;
+  background-image: url("../../assets/sw-bg2-5.png");
+  background-size: 100%;
+}
+
+.detail-card h2 {
   font-size: 28px;
   font-weight: bold;
+  text-transform: uppercase;
   margin-bottom: 20px;
-  color: #fff;
+  color: #ffe81f;
+  font-family: "Bruno Ace SC", cursive;
+  text-align: center;
+}
+.features {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  font-size: 15px;
+  color: #dbdbc7;
+  justify-content: center;
 }
 
-.starship-detail p {
+.model {
+  display: flex;
+  justify-content: center;
   font-size: 18px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #e7ea8d;
 }
 
-.starship-detail img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+.rating-detail {
+  color: burlywood;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  font-size: x-large;
 }
+
+.ships-img img {
+  max-height: 250px;
+}
+.ships-img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  transition: all 0.2s ease-in-out;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 80px 20px 0px 0px;
+}
+.ships-img:hover {
+  transform: scale(1.15);
+}
+
 .btn-backStarship {
-  font-size: 1em;
-  font-weight: bold;
-  text-transform: uppercase;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+
   background-color: transparent;
-  color: rgb(248, 244, 8);
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 5px rgba(219, 209, 209, 0.2);
-  border: 1px solid rgb(248, 244, 8);
-  padding: 10px;
-  margin-top: 2em;
+  border: none;
+}
+.btn-backStarship > img {
+  max-height: 30px;
+  max-width: 30px;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  padding: 8px;
+}
+.btn-backStarship > img:hover {
+  transform: scale(1.09);
+}
+
+@media screen and (max-width: 768px) {
+  .starship-detail {
+    height: 1000px;
+    width: 500px;
+    position: absolute;
+    display: block;
+  }
+  .features-title {
+    font-size: 10px;
+  }
+  .features-info {
+    display: inline-block;
+    font-size: 16px;
+  }
+  .detail-card img {
+    height: 100px;
+  }
 }

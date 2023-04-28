@@ -111,11 +111,11 @@ export default function Starships() {
                       {imgUrl && <img src={imgUrl} alt="img" />}
                     </div>
                     <div className="rating">
-                      {starship.hyperdrive_rating !== "unknown" && (
+                      {starship.hyperdrive_rating !== "0" && (
                         <ReactStars
                           count={5}
                           size={24}
-                          activeColor="#ffff00"
+                          activeColor="#ffe81f"
                           value={Number(starship.hyperdrive_rating)}
                           edit={false}
                           isHalf

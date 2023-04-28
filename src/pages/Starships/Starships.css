@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&family=Poppins&display=swap");
+
 .main {
   text-align: center;
-  color: aliceblue;
+  color: #ffe81f;
   padding-top: 120px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(26, 25, 25);
+  font-family: "Bruno Ace SC", cursive;
 }
 
 .card-container {
@@ -15,9 +18,10 @@
 
 .starship-card {
   width: 30%;
-  margin-bottom: 20px;
+  height: 390px;
+  margin-bottom: 30px;
   padding: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   box-shadow: 0px 0px 5px 0px rgba(240, 219, 79, 0.8);
   position: relative;
   background-image: url("../../assets/sw-bg2-5.png");
@@ -26,19 +30,21 @@
 
 .starship-card:hover {
   box-shadow: 0px 5px 10px 0px rgba(240, 219, 79, 0.8);
+  transform: scale(1.07);
 }
 
 .starship-card h2 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: bold;
-  font-family: Roboto, sans-serif;
+  font-family: "Bruno Ace SC", cursive;
   color: rgb(222, 222, 50);
+  text-transform: uppercase;
 }
 
 .starship-card p {
-  margin: 0;
+  text-align: center;
   font-size: 14px;
   font-family: Roboto, sans-serif;
 }
@@ -52,11 +58,12 @@
   box-shadow: 0 2px 5px rgba(248, 240, 7, 0.2);
   border: 1px solid rgb(249, 235, 36);
   background-color: transparent;
-  color: rgb(248, 244, 8);
+  color: #ffe81f;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
   margin-bottom: 4em;
+  padding: 9px;
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
@@ -67,18 +74,16 @@
   box-shadow: 0 2px 5px rgba(248, 240, 7, 0.2);
   border: 1px solid rgb(249, 235, 36);
   background-color: transparent;
-  color: rgb(248, 244, 8);
+  color: #ffe81f;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
   margin-bottom: 4em;
+  padding: 9px;
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-}
-.name {
-  color: yellow;
 }
 
 .img-ship {
@@ -89,8 +94,8 @@
 @media screen {
   .img-ship img {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 20px;
     width: 70%;
     height: 70%;
     padding: 30px 30px 0 30px;
@@ -99,18 +104,17 @@
   }
 }
 
-.rating h2 {
-  color: aliceblue;
-}
 .rating {
-  color: fff;
-  border: 1px solid #d6b055;
+  position: absolute;
+  border: 1px solid #ffe81f;
   background-color: transparent;
   padding: 5px;
+  padding-top: 3px;
   text-align: center;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
+  justify-content: center;
+  top: 83%;
+  left: 35%;
   justify-content: space-between;
   width: 100px;
   margin: 0 auto 20px auto;
