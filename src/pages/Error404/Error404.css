@@ -36,5 +36,6 @@
 @media screen and (max-width: 768px) {
   .error img {
     max-height: 200px;
+    margin-top: 200px;
   }
 }

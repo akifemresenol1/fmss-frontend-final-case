@@ -12,7 +12,7 @@
 
 .detail-card {
   margin: 0px auto;
-  margin-top: 80px;
+  margin-top: 120px;
   max-width: 1000px;
   height: 100%;
   border: 2px solid #f0db4f;
@@ -79,7 +79,7 @@
 
 .btn-backStarship {
   position: absolute;
-  top: 20px;
+  top: 35px;
   background-color: transparent;
   border: 2px solid #ffe81f;
   border-radius: 8px;
