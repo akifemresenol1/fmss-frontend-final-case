@@ -1,34 +1,30 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
+import { getStarshipDetail } from "../../api/starships";
 import LoadingScreen from "../../components/Loading";
-import { REACT_APP_API_BASE_URL } from "../../api/starships";
-import getStarshipId from "../../utils/getStarshipId";
 import backImg from "../../assets/goBack.png";
 import "./StarshipDetail.css";
 
 export default function StarshipDetail() {
   const [starship, setStarship] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const getId = starship ? getStarshipId(starship.url) : null;
-  const imgUrl = getId
-    ? `https://ik.imagekit.io/akifemresenol/starships/${getId}.png?updatedAt=1682374179359`
-    : null;
 
   useEffect(() => {
-    axios
-      .get(`${REACT_APP_API_BASE_URL}${id}`)
-      .then((response) => {
+    const fetchStarshipDetail = async () => {
+      try {
+        const response = await getStarshipDetail(id);
         setStarship(response.data);
         setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error(error);
+      } catch (err) {
+        console.log(err);
+        setIsLoading(false);
         navigate("/error");
-      });
+      }
+    };
+    fetchStarshipDetail();
   }, [id, navigate]);
 
   if (isLoading) {
@@ -45,7 +41,10 @@ export default function StarshipDetail() {
         <h2>{starship.name}</h2>
         <p className="model">Model: {starship.model}</p>
         <div className="ships-img">
-          {imgUrl && <img src={imgUrl} alt="img" />}
+          <img
+            src={`https://ik.imagekit.io/akifemresenol/starships/${id}.png`}
+            alt="img"
+          />
         </div>
         <div className="features">
           <h3>Passengers: {starship.passengers}</h3>
@@ -57,10 +56,7 @@ export default function StarshipDetail() {
         <p className="rating-detail">
           Hiperdrive Raiting: {starship.hyperdrive_rating}
         </p>
-        <button
-          className="btn-backStarship"
-          onClick={() => navigate("/starships")}
-        >
+        <button className="btn-backStarship" onClick={() => navigate(-1)}>
           <img src={backImg} alt="go back" />
         </button>
       </div>
