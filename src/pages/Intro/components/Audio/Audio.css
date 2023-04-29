@@ -3,7 +3,16 @@
 }
 .speaker {
   height: 35px;
+}
+
+.audio-wrapper {
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: 50px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+audio {
+  display: none;
 }

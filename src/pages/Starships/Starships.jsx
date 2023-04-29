@@ -114,18 +114,21 @@ export default function Starships() {
             );
           })}
         </div>
-        {!next ? (
+        {!next && starships.length > 4 ? (
           <button className="back-to-top-button" onClick={handleBackToTopClick}>
             Back to Top
           </button>
-        ) : (
-          <button
-            className="load-more-button"
-            onClick={() => handleLoadMoreClick(next)}
-          >
-            Load More
-          </button>
-        )}
+        ) : null}
+        <div>
+          {next ? (
+            <button
+              className="load-more-button"
+              onClick={() => handleLoadMoreClick(next)}
+            >
+              Load More
+            </button>
+          ) : null}
+        </div>
       </div>
     </>
   );

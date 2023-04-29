@@ -20,10 +20,10 @@ const Audio = ({ src, controls, autoplay }) => {
     if (autoplay) {
       audioRef.current.play();
     }
-  }, []);
+  }, [autoplay]);
 
   return (
-    <div>
+    <div className="audio-wrapper">
       <audio
         src={src}
         controls={controls}

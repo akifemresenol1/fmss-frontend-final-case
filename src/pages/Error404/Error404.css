@@ -1,33 +1,40 @@
 .error {
   background-image: "../../assets/star-wars-404.jpg";
+  max-width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
-.error {
+
+.error-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  margin-top: 60px;
 }
-
 .btn-return {
-  font-size: 1em;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   background-color: transparent;
-  color: rgb(248, 244, 8);
+  color: #ffe81f;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 5px rgba(219, 209, 209, 0.2);
-  border: 1px solid rgb(248, 244, 8);
+  border: 1px solid #ffe81f;
   padding: 10px;
-  margin-top: 2em;
+  margin-top: 32px;
 }
 .btn-return:hover {
   transform: scale(1.05);
 }
 
 .error img {
-  height: 70vh;
-  padding-top: 60px;
+  max-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .error img {
+    max-height: 200px;
+  }
 }

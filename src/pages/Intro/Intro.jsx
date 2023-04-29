@@ -14,7 +14,6 @@ function Intro() {
 
       <div className="scroller">
         <div id="intro-content">
-          {" "}
           <h2 className="title"> It is a dark time for the Rebellion. </h2>
           <p>Although the Death Star has been </p>
           <p>destroyed,</p>
@@ -32,15 +31,17 @@ function Intro() {
           <p>probes into the far reaches of space..</p>
         </div>
       </div>
-      <Speaker src={audio} controls autoplay />
-      <button
-        className="explore-button"
-        onClick={() => {
-          navigate("/starships");
-        }}
-      >
-        EXPLORE STARSHIPS
-      </button>
+      <div className="header">
+        <Speaker src={audio} controls autoplay />
+        <button
+          className="explore-button"
+          onClick={() => {
+            navigate("/starships");
+          }}
+        >
+          EXPLORE STARSHIPS
+        </button>
+      </div>
     </div>
   );
 }

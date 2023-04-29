@@ -11,6 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .logo-intro {
@@ -21,10 +23,10 @@ body {
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
-
   opacity: 0;
   animation: logo 31s linear forwards;
 }
+
 @keyframes logo {
   0% {
     width: 200px;
@@ -46,8 +48,6 @@ body {
 }
 
 .explore-button {
-  position: absolute;
-  top: 10%;
   font-size: 1em;
   font-weight: bold;
   font-family: "Bruno Ace SC", cursive;
@@ -81,18 +81,17 @@ body {
 .scroller {
   font-family: "Bruno Ace SC", cursive;
   font-weight: bold;
-  font-size: 350%;
+  position: absolute;
   text-align: justify;
   overflow: hidden;
-  height: 60em;
-  width: 20em;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -10em;
+  height: 1500px;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
   z-index: 0;
   transform: perspective(350px) rotateX(25deg);
   transform-origin: 50% 100%;
+  margin: 0 auto;
 }
 
 #intro-content {
@@ -102,8 +101,21 @@ body {
   align-items: center;
   font-size: 35px;
   top: 100%;
+  width: 100%;
   animation: scroller 30s ease-in-out 2s;
 }
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 50px 0px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 @keyframes scroller {
   0% {
     top: 100%;
@@ -119,7 +131,29 @@ body {
     opacity: 0.5;
   }
   100% {
-    top: 50%;
+    top: 10%;
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  @keyframes scroller {
+    0% {
+      top: 100%;
+      opacity: 1;
+    }
+    40% {
+      opacity: 0.9;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    85% {
+      opacity: 0.5;
+    }
+    100% {
+      top: -100%;
+      opacity: 0;
+    }
   }
 }

@@ -20,28 +20,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30%;
-  min-height: 430px;
+  width: calc(25% - 50px);
+  min-height: 250px;
   cursor: pointer;
   border-radius: 10px 65px 10px 65px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 0;
-  transition: all 0.4s ease-in-out;
-  box-shadow: 3px 3px 5px 3px rgba(240, 219, 79, 0.8);
+  transition: all 0.15s ease-in-out;
   position: relative;
   background-image: url("../../assets/sw-bg2-5.png");
   background-size: 100%;
+  border: 2px solid #b8ab37;
 }
 
 .starship-card:hover {
-  box-shadow: 0px 5px 10px 0px rgba(240, 219, 79, 0.8);
-  transform: scale(1.07);
+  transform: scale(1.1);
 }
 
 .starship-card h2 {
   margin-top: 30px;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "Bruno Ace SC", cursive;
   color: rgb(222, 222, 50);
@@ -50,7 +49,7 @@
 
 .starship-card p {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-family: Roboto, sans-serif;
 }
 
@@ -63,64 +62,45 @@
 }
 
 .load-more-button {
-  box-shadow: 0 2px 5px rgba(248, 240, 7, 0.2);
-  border: 1px solid rgb(249, 235, 36);
+  border: 1px solid #b8ab37;
   background-color: transparent;
   color: #ffe81f;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  margin-bottom: 4em;
+  margin: 30px 0px;
   padding: 9px;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
 
 .back-to-top-button {
-  box-shadow: 0 2px 5px rgba(248, 240, 7, 0.2);
-  border: 1px solid rgb(249, 235, 36);
+  border: 1px solid #b8ab37;
   background-color: transparent;
   color: #ffe81f;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  margin-bottom: 4em;
+  margin-bottom: 64px;
   padding: 9px;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-}
-
-.img-ship {
-  display: grid;
-  align-items: center;
-  max-height: 250px;
-  max-width: 80%;
+  margin: 30px 0px;
 }
 
 .img-ship img {
   margin-top: 40px;
-  margin-left: 40px;
   width: 100%;
-  height: 170px;
+  height: 100px;
   object-fit: contain;
-}
-@media screen and (max-width: 768px) {
-  .img-ship img {
-    max-height: 100px;
-    max-width: 300px;
-  }
-  .starship-card {
-    width: 80%;
-    padding: 20px;
-  }
 }
 
 .rating {
-  border: 1px solid #ffe81f;
+  border: 1px solid #b8ab37;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -130,4 +110,11 @@
   width: 100px;
   margin: 50px auto 20px auto;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .starship-card {
+    width: 70%;
+    margin: 0px auto;
+  }
 }
