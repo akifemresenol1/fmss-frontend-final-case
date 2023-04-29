@@ -92,13 +92,10 @@ A react project for FMSS frontend practicum!
 
 <li>  <a  href="#project-details">Project Details</a></li>
 
-<li>  <a  href="#sources"> Sources</a></li>
-
 <li><a  href="#contributing">Contributing</a></li>
 
 <li><a  href="#contact">Contact</a></li>
 
-<li><a  href="#acknowledgments">Acknowledgments</a></li>
 
 </ol>
 
@@ -133,8 +130,6 @@ A react project for FMSS frontend practicum!
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
-![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 
