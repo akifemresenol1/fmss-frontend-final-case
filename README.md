@@ -26,15 +26,11 @@ A react project for FMSS frontend practicum!
 
 <br  />
 
-<a  target="_blank"  href="-netlify ekle-">View Demo</a>
+· <a  target="_blank"  href="https://starwars-fmss-akifemresenol.netlify.app">View Demo</a>
 
-·
+· <a  href="https://github.com/akifemresenol1/fmss-frontend-final-case/issues">Report Bug</a>
 
-<a  href="https://github.com/akifemresenol1/fmss-frontend-final-case/issues">Report Bug</a>
-
-·
-
-<a  href="https://github.com/akifemresenol1/fmss-frontend-final-case/issues">Request Feature</a>
+· <a  href="https://github.com/akifemresenol1/fmss-frontend-final-case/issues">Request Feature</a>
 
 </p>
 
